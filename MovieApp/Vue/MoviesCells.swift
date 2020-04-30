@@ -8,19 +8,28 @@
 
 import UIKit
 
+
+
 class MoviesCells: UITableViewCell {
 
-
-
-    @IBOutlet weak var imgev: UIImageView!
+    
+    
+ 
+    @IBOutlet weak var imgv: UIImageView!
     
     
     @IBOutlet weak var nameLbl: UILabel!
     
     
+    
     @IBOutlet weak var descLbl: UILabel!
     
-    
-   
+    var movie: Movie!
+
+   func configureCell(_ movie: Movie) {
+       self.movie = movie
+       nameLbl.text = self.movie.title
+       descLbl.text = self.movie.description
+   }
     
 }

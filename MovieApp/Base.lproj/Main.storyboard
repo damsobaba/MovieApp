@@ -12,10 +12,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Single Moview Controller-->
         <scene sceneID="2nI-U9-E1g">
             <objects>
-                <viewController id="gzG-Y3-6II" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="gzG-Y3-6II" customClass="SingleMoviewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z4t-nE-4ff">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,39 +29,58 @@
                                 <color key="textColor" red="0.8559491038" green="0.13103273509999999" blue="0.1528710127" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jQY-2y-fIb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jQY-2y-fIb" userLabel="descriptionView">
                                 <rect key="frame" x="20" y="539" width="374" height="254"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t5B-I0-JE4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t5B-I0-JE4" userLabel="ImgView">
                                 <rect key="frame" x="0.0" y="105" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="t5B-I0-JE4" secondAttribute="height" id="HI1-i6-qJE"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1v-fg-Ykf" userLabel="ThrailerView">
+                                <rect key="frame" x="0.0" y="115" width="414" height="404"/>
+                                <state key="normal" title="Watch Trailler">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="thrailerVideo:" destination="gzG-Y3-6II" eventType="touchUpInside" id="0XY-td-m4X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="G1v-fg-Ykf" firstAttribute="leading" secondItem="k6N-C4-CF0" secondAttribute="leading" id="3Ny-zz-1gj"/>
                             <constraint firstItem="A7g-pE-55T" firstAttribute="leading" secondItem="k6N-C4-CF0" secondAttribute="leading" constant="20" id="3is-ao-7hP"/>
+                            <constraint firstItem="G1v-fg-Ykf" firstAttribute="top" secondItem="A7g-pE-55T" secondAttribute="bottom" constant="20" id="5wg-6s-pxk"/>
                             <constraint firstItem="t5B-I0-JE4" firstAttribute="trailing" secondItem="k6N-C4-CF0" secondAttribute="trailing" id="8qJ-Zu-Qd3"/>
                             <constraint firstItem="A7g-pE-55T" firstAttribute="top" secondItem="k6N-C4-CF0" secondAttribute="top" constant="20" id="Hkt-tm-3N6"/>
                             <constraint firstItem="jQY-2y-fIb" firstAttribute="leading" secondItem="k6N-C4-CF0" secondAttribute="leading" constant="20" id="Ia7-Fc-UOp"/>
                             <constraint firstItem="k6N-C4-CF0" firstAttribute="trailing" secondItem="jQY-2y-fIb" secondAttribute="trailing" constant="20" id="Mgz-G2-Blw"/>
                             <constraint firstItem="k6N-C4-CF0" firstAttribute="bottom" secondItem="jQY-2y-fIb" secondAttribute="bottom" constant="15" id="XFW-RL-Woh"/>
+                            <constraint firstItem="jQY-2y-fIb" firstAttribute="top" secondItem="G1v-fg-Ykf" secondAttribute="bottom" constant="20" id="eUv-2l-LkR"/>
                             <constraint firstItem="jQY-2y-fIb" firstAttribute="top" secondItem="t5B-I0-JE4" secondAttribute="bottom" constant="20" id="fBJ-gT-vp4"/>
                             <constraint firstItem="k6N-C4-CF0" firstAttribute="trailing" secondItem="A7g-pE-55T" secondAttribute="trailing" constant="20" id="hlM-n8-5g0"/>
                             <constraint firstItem="t5B-I0-JE4" firstAttribute="leading" secondItem="k6N-C4-CF0" secondAttribute="leading" id="oFN-PC-gkD"/>
                             <constraint firstItem="t5B-I0-JE4" firstAttribute="top" secondItem="A7g-pE-55T" secondAttribute="bottom" constant="10" id="oXR-c6-4Ve"/>
+                            <constraint firstItem="G1v-fg-Ykf" firstAttribute="trailing" secondItem="k6N-C4-CF0" secondAttribute="trailing" id="teH-lN-oAR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k6N-C4-CF0"/>
                     </view>
                     <navigationItem key="navigationItem" id="OGB-PA-ktw"/>
+                    <connections>
+                        <outlet property="descriptionView" destination="jQY-2y-fIb" id="rbO-59-lQa"/>
+                        <outlet property="imgView" destination="t5B-I0-JE4" id="VAA-fg-Iwz"/>
+                        <outlet property="lblView" destination="A7g-pE-55T" id="sUy-Wg-MoW"/>
+                        <outlet property="thrailerView" destination="G1v-fg-Ykf" id="MQJ-Ke-nUb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbJ-PJ-LLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="118"/>
+            <point key="canvasLocation" x="847.82608695652175" y="117.85714285714285"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yEs-8t-RyU">
@@ -128,7 +147,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descLbl" destination="zCC-0k-kfC" id="Lce-wz-hhG"/>
-                                            <outlet property="imgeV" destination="PEa-VI-V0D" id="Buf-9b-ACR"/>
                                             <outlet property="imgev" destination="PEa-VI-V0D" id="htn-CR-Jpv"/>
                                             <outlet property="nameLbl" destination="9VX-7B-2Yu" id="s9w-US-LJN"/>
                                         </connections>
@@ -149,7 +167,8 @@
                         <viewLayoutGuide key="safeArea" id="mkm-eQ-W4y"/>
                     </view>
                     <connections>
-                        <segue destination="gzG-Y3-6II" kind="show" identifier="detail" id="JSd-ay-xb7"/>
+                        <outlet property="tableView" destination="oZs-Mj-xmF" id="Ve3-AG-CoI"/>
+                        <segue destination="gzG-Y3-6II" kind="show" identifier="Detail" id="JSd-ay-xb7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXp-Wj-wq2" sceneMemberID="firstResponder"/>
